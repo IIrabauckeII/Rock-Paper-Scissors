@@ -1,0 +1,71 @@
+* {
+  font-family: 'Baloo Paaji 2', cursive;
+  background-color: grey;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 0;
+  color: black;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+#subtitle {
+  margin-top: 0;
+}
+
+.pictures {
+  margin-top: 2rem;
+  display:flex;
+  justify-content : center;
+  max-width: 100%;
+}
+
+.pictures img {
+  width: auto;
+  max-height: 18rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform .4s;
+}
+
+.pictures img:hover {
+  box-shadow: 10px 10px 5px grey;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #2196F3;
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 1.2rem;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #2196F3;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
