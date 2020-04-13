@@ -4,32 +4,49 @@ let gamesPlayed = 0;
 let computerWins = 0;
 let playerWins = 0;
 
+const alertBox = document.querySelector('#alert');
+
+function showAlertBox() {
+  alertBox.classList.add("alertShown");
+  alertBox.style['background-color'] = "#2196F3";
+  alertBox.innerHTML = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  Computer is playing...`
+}
+
 function playRound(playerSelection) {
   gamesPlayed++;
   let computerSelection = rockPaperScissors[Math.floor(Math.random() * 3)];
   // tie
   if (playerSelection == computerSelection) {
-      alert(`Computer selected ${computerSelection}.
-
-
-It's a Tie. You selected the same symbol as the computer.`)
+    showAlertBox();
+    setTimeout(function () {
+      alertBox.innerHTML = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      It's a Tie. You selected the same symbol as the computer.`
+    }, 1300);
+    ;
       }
   // Computer wins
   if (playerSelection == "Rock" && computerSelection == "Paper" || playerSelection == "Paper" && computerSelection == "Scissors" || playerSelection == "Scissors" && computerSelection == "Rock") {
+      showAlertBox();
+      setTimeout(function () {
+        alertBox.innerHTML = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        You Lose! ${computerSelection} beats ${playerSelection}.`;
+        alertBox.style['background-color'] = "red";
+      }, 1300);
+
       computerWins++;
-      alert(`Computer selected ${computerSelection}.
-
-
-You Lose! ${computerSelection} beats ${playerSelection}.`)
     }
   // Player wins
   if (playerSelection == "Rock" && computerSelection == "Scissors" || playerSelection == "Paper" && computerSelection == "Rock" || playerSelection == "Scissors" && computerSelection == "Paper") {
+    showAlertBox();
+    setTimeout(function () {
+      alertBox.innerHTML = `<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      You Win! ${playerSelection} beats ${computerSelection}.`;
+      alertBox.style['background-color'] = "green";
+    }, 1300);
     playerWins++;
-    alert(`Computer selected ${computerSelection}.
-
-
-You Win! ${playerSelection} beats ${computerSelection}.`)
     }
+
   document.getElementById('stats').innerHTML = `Games Played: ${gamesPlayed}  |  Games Won: ${playerWins}  |  Games Lost: ${computerWins}`;
 
 }
@@ -51,7 +68,4 @@ const randomSubtitle = () => {
 
 document.getElementById('subtitle').innerHTML = randomSubtitle();
 
-//counter
-
-
-// ToDo: delay ergebnis
+// ToDo: await async, close button background color, reset background color; fix close button/ delete close button?

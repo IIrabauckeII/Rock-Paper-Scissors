@@ -4,9 +4,53 @@
   color: white;
 }
 
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+/* The alert message box */
+#alert {
+  padding: 20px;
+  background-color: #2196F3;
+  color: white;
+  margin-bottom: 0rem;
+  font-size: 1.2rem;
+  transition: visibility 2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 1.2rem;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #2196F3;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+.alertHidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.alertShown {
+  visibility: visible;
+  opacity: 1;
+}
+
 h1 {
   text-align: center;
   font-size: 3rem;
+  margin-top: 0rem;
   margin-bottom: 0;
   color: black;
 }
@@ -40,32 +84,4 @@ h2 {
   box-shadow: 10px 10px 5px grey;
   transform: scale(1.05);
   cursor: pointer;
-}
-
-
-/* The alert message box */
-.alert {
-  padding: 20px;
-  background-color: #2196F3;
-  color: white;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-}
-
-/* The close button */
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 1.2rem;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-  background-color: #2196F3;
-}
-
-/* When moving the mouse over the close button */
-.closebtn:hover {
-  color: black;
 }
