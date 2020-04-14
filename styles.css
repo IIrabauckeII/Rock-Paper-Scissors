@@ -1,40 +1,40 @@
 * {
   font-family: 'Baloo Paaji 2', cursive;
-  background-color: grey;
-  color: white;
 }
 
 body {
   height: 100vh;
   margin: 0;
+  background-color: #909090;
 }
 
 /* The alert message box */
 #alert {
-  padding: 20px;
+  padding: 0.5rem 4rem;
   background-color: #2196F3;
-  color: white;
-  margin-bottom: 0rem;
+  margin-bottom: 0.5rem;
   font-size: 1.2rem;
-  transition: visibility 2s ease-in-out, background-color 0.2s ease-in-out;
-}
-
-/* The close button */
-.closebtn {
-  margin-left: 15px;
-  color: white;
+  transition: opacity 1s ease-in-out, background-color 0.3s ease-in;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0.4rem 0.4rem 0.3rem #808080;
   font-weight: bold;
-  float: right;
-  font-size: 1.2rem;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-  background-color: #2196F3;
+  text-align: center;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.3rem;
+  width: 20rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* When moving the mouse over the close button */
-.closebtn:hover {
-  color: black;
+#alert img{
+  border-radius: 50%;
+  max-height: 3rem;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .alertHidden {
@@ -45,6 +45,10 @@ body {
 .alertShown {
   visibility: visible;
   opacity: 1;
+}
+
+.titleDiv {
+  overflow-y: hidden;
 }
 
 h1 {
@@ -58,10 +62,7 @@ h1 {
 h2 {
   text-align: center;
   font-size: 1.8rem;
-}
-
-#subtitle {
-  margin-top: 0;
+  color: white;
 }
 
 .pictures {
@@ -73,15 +74,20 @@ h2 {
 
 .pictures img {
   width: auto;
-  max-height: 18rem;
+  max-height: 14rem;
   margin-left: 1rem;
   margin-right: 1rem;
   border-radius: 50%;
-  transition: transform .4s;
+  background-color: #FFE5BF;
 }
 
 .pictures img:hover {
   box-shadow: 10px 10px 5px grey;
   transform: scale(1.05);
   cursor: pointer;
+  background-color: #FFCC80;
+}
+
+.active{
+  background-color: #FFCC80 !important;
 }
