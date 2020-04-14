@@ -51,7 +51,7 @@ function playRound(playerSelection) {
   if (playerSelection == computerSelection) {
     alertBoxAnimation();
     setTimeout(function () {
-      alertBox.innerHTML += `It's a Tie!`;
+      alertBox.innerHTML += `   It's a Tie!`;
       locked = false;
     }, 2000);
   }
@@ -61,7 +61,7 @@ function playRound(playerSelection) {
       alertBoxAnimation();
       setTimeout(function () {
         alertBox.style['background-color'] = "rgba(244,67,54, 0.8)";
-        alertBox.innerHTML += `You Lose!`;
+        alertBox.innerHTML += `   You Lose!`;
         locked = false;
       }, 2000);
       computerWins++;
@@ -71,7 +71,7 @@ function playRound(playerSelection) {
     alertBoxAnimation();
     setTimeout(function () {
       alertBox.style['background-color'] = "rgba(76,175,80,0.8)";
-      alertBox.innerHTML += `You Win!`;
+      alertBox.innerHTML += `   You Win!`;
       locked = false;
     }, 2000);
     playerWins++;
@@ -82,7 +82,7 @@ function playRound(playerSelection) {
 }
 
 
-// event listener - button clicks
+// event listeners - button clicks
 document.getElementById("Rock").addEventListener("click", function() {
   if (locked == false) {
     if (!this.classList.contains('active')) {

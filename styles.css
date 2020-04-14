@@ -5,7 +5,7 @@
 body {
   height: 100vh;
   margin: 0;
-  background-color: #909090;
+  background-color: #FFF2DF;
 }
 
 /* The alert message box */
@@ -17,7 +17,7 @@ body {
   transition: opacity 1s ease-in-out, background-color 0.3s ease-in;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  box-shadow: 0.4rem 0.4rem 0.3rem #808080;
+  box-shadow: 0.3rem 0.4rem 0.3rem #808080, 0.3rem 0rem 0.3rem #808080;
   font-weight: bold;
   text-align: center;
   height: 3rem;
@@ -62,7 +62,8 @@ h1 {
 h2 {
   text-align: center;
   font-size: 1.8rem;
-  color: white;
+  color: black;
+  font-weight: normal;
 }
 
 .pictures {
